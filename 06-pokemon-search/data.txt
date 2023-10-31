@@ -1,3 +1,0 @@
-ESIPO 
-This is the framework by which the user
-keys in information to 
