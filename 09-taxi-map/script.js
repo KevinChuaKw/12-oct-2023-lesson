@@ -21,18 +21,6 @@ const bedok85Marker = L.marker([1.3320, 103.9387]);
 bedok85Marker.addTo(mapObject);
 bedok85Marker.bindPopup(`<h1>Bedok 85</h1>`)
 
-// add a circle to Bukit Timah (1.3294° N, 103.8021° E)
-const greenCircle = L.circle([1.3294, 103.8021], {
-    radius: 1000,
-    color: "green",
-    fillColor: "darkGreen",
-    opacity: 0.5
-})
-greenCircle.addTo(mapObject);
-greenCircle.addEventListener("click", function(){
-    alert("Hello I am at Bukit Timah");
-})
-
 // A layer group is a group of layers
 // It allows us to put layers into a group so that
 // it is easier to manage. And some layer group has 
