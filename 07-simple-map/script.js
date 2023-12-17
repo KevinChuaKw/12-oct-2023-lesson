@@ -4,9 +4,10 @@
 // the first argument is the ID of the element to contain the map
 const mapObject = L.map("mapContainer");
 
-// set the center point of where the map is looking at
+// We also need to set the center point of where the map is looking at
+// before the map will run
 
-// first argument is the lat lng of the center pooint. lat,lng will be stored as array. index 0 is lat and index is lng (but sometimes its reversed)
+// first argument is the lat lng of the center point. lat,lng will be stored as array. index 0 is lat and index is lng (but sometimes its reversed)
 // second arugment will be the zoom level
 mapObject.setView([1.3521, 103.8198], 13);
 
