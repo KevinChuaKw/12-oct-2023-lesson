@@ -16,11 +16,6 @@ L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
     attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
 }).addTo(mapObject);
 
-// add a marker at Bedok 85 (1.3320° N, 103.9387° E)
-const bedok85Marker = L.marker([1.3320, 103.9387]);
-bedok85Marker.addTo(mapObject);
-bedok85Marker.bindPopup(`<h1>Bedok 85</h1>`)
-
 // A layer group is a group of layers
 // It allows us to put layers into a group so that
 // it is easier to manage. And some layer group has 
