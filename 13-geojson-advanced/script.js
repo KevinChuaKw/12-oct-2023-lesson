@@ -27,8 +27,21 @@ document.addEventListener("DOMContentLoaded", async function () {
         // second arg: the layer (i.e the path,marker etc.) created for the feature
         // When you use on each feature, it will be pased into the first argument below (this is the raw data). The next arguement is
         // layer which is how it is represented on leaflet
+        // To customise each of the feature, there is a need to us 'onEachFeature' 
         onEachFeature:function(feature, layer){
-            layer.bindPopup("Path is clicked"); 
+            console.log(feature)
+            layer.bindPopup(feature.properties.Description); 
+
+            // create a temp element to store the HTML
+            const tempElement = document.createElement('div');
+            tempElement.innerHTML = feature.properties.Description;
+            // use query selector to extract from the temp element the data that I want
+            const allTDs = tempElement.querySelectorAll('td'); 
+            const region = allTDs[0].innerHTML;
+            const agency = allTDs[1].innerHTML; 
+            layer.bindPopup(`<h1>${region}</h1>
+                <h2>${agency}</h2>
+            `);
         }
     }); 
     // set the color of the lines to red
