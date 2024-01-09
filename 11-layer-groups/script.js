@@ -88,4 +88,4 @@ const overlays = {
     "Green Circle": randomGreenGroup
 }
 
-L.control.layers(baseLayers, overlays).addTo(map);
+L.control.layers(baseLayers, overlays).addTo(map); 
